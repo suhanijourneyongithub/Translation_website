@@ -33,8 +33,9 @@ discussion = openai.Completion.create(
    max_tokens=1000,
 )
 
-answer = discussion
-print(answer)
+answer = discussion.choises[0].text
+if answer:
+   speak(answer)
 
 
 
